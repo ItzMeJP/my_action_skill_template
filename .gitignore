@@ -1,0 +1,7 @@
+#ignore specific subfolders
+*/cmake-build-debug
+*/.idea
+/.idea
+
+# ignore all logs
+*.log
