@@ -13,6 +13,7 @@
 
 // ROS includes
 #include <ros/ros.h>
+#include <std_msgs/String.h>
 #include <actionlib/server/simple_action_server.h>
 #include <my_action_skill_msgs/MyActionSkillAction.h>
 
@@ -44,6 +45,9 @@ namespace my_action_skill {
 
         ros::NodeHandlePtr node_handle_;
         ros::NodeHandlePtr private_node_handle_;
+        ros::Publisher pub_;
+
+        void publisher();
 
         std::shared_ptr<MyActionSkillActionServer>                               actionServer_; // to not init it in the constructor
         std::string                                                              action_server_name_;

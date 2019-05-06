@@ -79,4 +79,10 @@ namespace my_action_skill {
         return true;
     }
 
+    void MyActionSkill::publisher()
+    {
+        pub_ = private_node_handle_->advertise<std_msgs::String>("my_pub_topic", 100);
+        pub_.publish("data");
+    }
+
 }
